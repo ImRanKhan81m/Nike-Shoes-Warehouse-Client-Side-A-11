@@ -12,11 +12,13 @@
 .collection h2{
     color: #fff;
     font-size: 50px;
-    letter-spacing: 10px;
+    font-weight: 700;
+    letter-spacing: 6px;
 }
 .collection h6{
-    color: #fff;
+    color: orange;
     font-size: 20px;
+    font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 255px;
 }

@@ -1,6 +1,6 @@
 .carousel-section {
     padding:100px;
-    background-image: url(../images/home-bg-3.jpg);
+    /* background-image: url(../images/home-bg-3.jpg); */
     background-size: cover;
 }
 
@@ -10,9 +10,10 @@
 }
 .details-btn{
     padding: 10px 20px;
-    border: 1px solid rgba(99, 99, 99, 0.251);
+    /* border: 1px solid rgba(99, 99, 99, 0.251); */
+    border: none;
     border-radius: 8px;
-    background-color:#ffb908c7;
+    background-color:rgba(255, 166, 0, 0.774);
     font-size: 20px;
 }
 .banner-text span{

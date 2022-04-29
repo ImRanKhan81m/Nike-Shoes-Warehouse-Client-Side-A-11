@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../images/logo2.png'
+import './Header.css'
 
 const Header = () => {
     return (
-            <Navbar sticky='top' className='shadow-sm' collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar sticky='top' className='shadow-sm navbarh' collapseOnSelect expand="lg"  variant="light">
                 <Container>
                     <Navbar.Brand href="#home">
                         <div><img style={{width:'100px'}} src={logo} alt="" /></div>
