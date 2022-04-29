@@ -1,3 +1,6 @@
+.inventory{
+    padding: 0 50px;
+}
 .inventory h2 {
     font-size: 50px;
     font-weight: 700;
@@ -8,7 +11,7 @@
 }
 .inventories{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 .inventory-items{

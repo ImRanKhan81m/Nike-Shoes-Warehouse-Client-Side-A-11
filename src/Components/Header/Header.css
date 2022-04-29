@@ -1,3 +1,7 @@
 .navbarh{
-    background-color: #ffffff1e !important;
+    background-color: #e2e2fe !important;
+}
+.nav-item nav{
+    font-size: 20px;
+    color: black !important;
 }
