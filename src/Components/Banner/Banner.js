@@ -19,7 +19,7 @@ const Banner = () => {
                                 </div>
                             </Col>
                             <Col  lg='6'>
-                                <div className='banner-img'>
+                                <div className='banner-img pb-5'>
                                     <img src={img1} alt="" />
                                 </div>
                             </Col>
