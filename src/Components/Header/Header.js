@@ -19,7 +19,7 @@ const Header = () => {
                             <Nav.Link style={{color:'black'}} as={Link} to="/manage">Manage items</Nav.Link>
                             <Nav.Link style={{color:'black'}} href="#deets">Add Item</Nav.Link>
                             <Nav.Link style={{color:'black'}} href="#deets">My Items</Nav.Link>
-                            <Nav.Link style={{color:'black'}} href="#deets">Login</Nav.Link>
+                            <Nav.Link style={{color:'black'}} as={Link} to="/login">Login</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
