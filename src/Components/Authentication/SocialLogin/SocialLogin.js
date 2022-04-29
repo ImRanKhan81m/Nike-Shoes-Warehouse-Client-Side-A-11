@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
+import googleLogo from '../../images/logo/Google.png'
+import githubLogo from '../../images/logo/GitHub.png'
 
 const SocialLogin = () => {
     return (
@@ -15,7 +17,7 @@ const SocialLogin = () => {
                         style={{ fontSize: '20px'}} className='btn btn-light px-4 py-2 w-75 login-btn'>
                         <Row>
                             <Col lg='4' md='3' sm='6' className='text-end '>
-                                <img src={'googleLogo'} alt="" />
+                                <img src={googleLogo} alt="" />
                             </Col>
                             <Col lg='8' md='9' sm='6' className='text-start'>
                                 <span className='px-2'>Google Sign In</span>
@@ -29,7 +31,7 @@ const SocialLogin = () => {
                         style={{ fontSize: '20px' }} className='btn btn-light px-4 py-2 w-75 login-btn'>
                         <Row>
                             <Col lg='4' md='3' sm='2' className='text-end'>
-                                <img src={'githubLogo'} alt="" />
+                                <img src={githubLogo} alt="" />
                             </Col>
                             <Col lg='8' md='9' sm='10' className='text-start'>
                                 <span className='px-2'>Github Sign In</span>
