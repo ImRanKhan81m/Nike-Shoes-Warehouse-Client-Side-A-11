@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import './InventoryItems.css'
 import img1 from '../images/f-img-3.1.png'
 
