@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo2.png'
+import logo from '../images/logo/logo2.png'
 import './Header.css'
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
             <Navbar sticky='top' className='shadow-sm navbarh' collapseOnSelect expand="lg"  variant="light">
                 <Container>
                     <Navbar.Brand href="#home">
-                        <div><img style={{width:'100px'}} src={logo} alt="" /></div>
+                        <div><Link to={'/'}><img style={{width:'150px'}} src={logo} alt="" /></Link></div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

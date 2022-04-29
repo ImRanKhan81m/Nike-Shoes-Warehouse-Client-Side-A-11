@@ -5,7 +5,7 @@ import img1 from '../images/home-shoe-3.png'
 
 const Banner = () => {
     return (
-        <div className='carousel-section'>
+        <div className='carousel-section' id='home'>
                     <div>
                         <Row>
                             <Col lg='6' className='d-flex justify-content-center align-items-center'>
