@@ -1,0 +1,22 @@
+.collection-exercise{
+    background-image: url(../images/home-1-banner-1.jpg);
+    background-size: cover;
+    padding: 80px 50px;
+    color: #fff;
+    
+}
+.collection-sport{
+    background-image: url(../images/home-1-banner-2.jpg);
+    padding: 80px 50px;
+}
+.collection h2{
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+.collection h6{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 255px;
+}
