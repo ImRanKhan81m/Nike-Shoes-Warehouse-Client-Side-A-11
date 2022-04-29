@@ -1,0 +1,13 @@
+
+.notfound h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #2C2C54;
+}
+.notfound span{
+    color: rgb(255, 136, 0);
+}
+.notfound p{
+    font-size: 23px;
+    color: rgba(0, 0, 0, 0.526);
+}

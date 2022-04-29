@@ -6,6 +6,7 @@ import Register from './Components/Authentication/Register/Register';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/manage' element={<ManageInventories/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </div>
   );
