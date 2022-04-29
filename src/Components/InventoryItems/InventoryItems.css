@@ -1,0 +1,15 @@
+.inventory h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2C2C54;
+}
+.inventory span{
+    color: #FF9F1A;
+}
+.inventories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.inventory-items img{
+    width: 100%;
+}

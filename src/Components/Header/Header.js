@@ -4,8 +4,7 @@ import logo from '../images/logo2.png'
 
 const Header = () => {
     return (
-        <header>
-            <Navbar className='shadow-sm' collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar sticky='top' className='shadow-sm' collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="#home">
                         <div><img style={{width:'100px'}} src={logo} alt="" /></div>
@@ -23,7 +22,6 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
     );
 };
 
