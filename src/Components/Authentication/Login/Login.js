@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
+    const navigate = useNavigate();
+
+
+    const navigateRegister = ()=>{
+        navigate('/register')
+    }
     return (
         <div className='container py-4 inventory' style={{ height: '86vh' }}>
             <h2>Please <span>Login</span></h2>
@@ -26,7 +33,7 @@ const Login = () => {
                             </Button>
                         </Form>
                         <div>
-                            <p>New Admin? <span style={{ cursor: 'pointer' }}> Register Now</span></p>
+                            <p>New Admin? <span onClick={navigateRegister} style={{ cursor: 'pointer' }}> Register Now</span></p>
                             <p>Forgot Password? <span style={{ cursor: 'pointer' }}>Reset</span></p>
                             <SocialLogin/>
                         </div>
