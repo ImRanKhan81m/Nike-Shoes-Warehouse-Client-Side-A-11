@@ -23,7 +23,7 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto ">
                         <Nav.Link style={{ color: 'black' }} as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link style={{ color: 'black' }} href="#pricing">Blog</Nav.Link>
+                        <Nav.Link style={{ color: 'black' }} as={Link} to="/blog">Blog</Nav.Link>
                         {
                             user && <>
                                 <Nav.Link style={{ color: 'black' }} as={Link} to="/manage">Manage items</Nav.Link>

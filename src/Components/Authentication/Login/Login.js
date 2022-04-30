@@ -1,4 +1,4 @@
-import { sendPasswordResetEmail } from 'firebase/auth';
+
 import React, { useRef } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -15,7 +15,7 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/home";
     const [
         signInWithEmailAndPassword,
         user,
