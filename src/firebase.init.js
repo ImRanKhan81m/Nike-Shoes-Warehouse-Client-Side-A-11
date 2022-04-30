@@ -6,18 +6,18 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  /* apiKey:process.env.REACT_APP_APIKEY,
-  authDomain:process.env.REACT_APP_AUTHDOMAIN,
-  projectId:process.env.REACT_APP_PROJECTID,
-  storageBucket:process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId:process.env.REACT_APP_MESSAGINGSENDERID,
-  appId:process.env.REACT_APP_APPID, */
-  apiKey: "AIzaSyAP_nLS45ovSmZMo9RLH46rdaIE0Q5leYs",
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId,
+  /* apiKey: "AIzaSyAP_nLS45ovSmZMo9RLH46rdaIE0Q5leYs",
   authDomain: "nike-shoes-warehouse-f66ef.firebaseapp.com",
   projectId: "nike-shoes-warehouse-f66ef",
   storageBucket: "nike-shoes-warehouse-f66ef.appspot.com",
   messagingSenderId: "598441759622",
-  appId: "1:598441759622:web:aebc5003abab34cb0f5207"
+  appId: "1:598441759622:web:aebc5003abab34cb0f5207" */
 };
 
 // Initialize Firebase
