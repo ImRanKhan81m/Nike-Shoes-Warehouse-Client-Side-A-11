@@ -27,16 +27,20 @@ const Register = () => {
     if (user) {
         navigate(from, { replace: true })
     }
+    let errorElement;
+    if (error) {
+       errorElement = <p className='text-danger'>Email already registered!</p>
+    }
 
     const handleRegister= async(event)=>{
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        await createUserWithEmailAndPassword(email, password);;
-        navigate('/')
-
+        await createUserWithEmailAndPassword(email, password);
+        // navigate('/')
     }
+    
     return (
         <div className='register-form container inventory py-3'>
             <h2>Please <span>Register</span></h2>
@@ -57,12 +61,13 @@ const Register = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" name='password' placeholder="Password" autoComplete='on' required />
+                                <Form.Control type="password" name='password' placeholder="Password (at least 6 words)" autoComplete='on' required />
                             </Form.Group>
                             <Button className='w-100 py-2 login-btn'  type="submit">
                                 <span>Register</span>
                             </Button>
                         </Form>
+                        {errorElement}
                         <p>Already have an account? <span onClick={navigateLogin} style={{ cursor: 'pointer', color:'orange' }}>Login Now</span></p>
                         <SocialLogin />
                     </div>

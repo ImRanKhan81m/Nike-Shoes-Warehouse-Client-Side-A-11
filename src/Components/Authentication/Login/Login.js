@@ -30,6 +30,10 @@ const Login = () => {
     if (loading ) {
         return <Loading />
     }
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Incorrect Username or Password. Try Again!</p>
+    } 
     const handleSubmit = event =>{
         event.preventDefault();
         const email = emailRef.current.value;
@@ -58,6 +62,7 @@ const Login = () => {
                                 Login
                             </Button>
                         </Form>
+                        {errorElement}
                         <div>
                             <p>New Admin? <span onClick={navigateRegister} style={{ cursor: 'pointer' }}> Register Now</span></p>
                             <p>Forgot Password? <span style={{ cursor: 'pointer' }}>Reset</span></p>
