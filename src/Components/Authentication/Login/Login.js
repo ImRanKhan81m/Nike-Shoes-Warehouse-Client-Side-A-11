@@ -1,11 +1,14 @@
+import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -18,23 +21,35 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
-
-    const navigateRegister = ()=>{
+    const navigateRegister = () => {
         navigate('/register')
     }
     if (user) {
         navigate(from, { replace: true })
     }
-    if (loading ) {
+
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        } else {
+            toast('Please enter your email address.')
+        }
+    }
+
+    if (loading) {
         return <Loading />
     }
     let errorElement;
     if (error) {
         errorElement = <p className='text-danger'>Incorrect Username or Password. Try Again!</p>
-    } 
-    const handleSubmit = event =>{
+    }
+    const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
@@ -65,14 +80,15 @@ const Login = () => {
                         {errorElement}
                         <div>
                             <p>New Admin? <span onClick={navigateRegister} style={{ cursor: 'pointer' }}> Register Now</span></p>
-                            <p>Forgot Password? <span style={{ cursor: 'pointer' }}>Reset</span></p>
-                            <SocialLogin/>
+                            <p>Forgot Password? <span onClick={resetPassword} style={{ cursor: 'pointer' }}>Reset</span></p>
+                            <SocialLogin />
                         </div>
                     </div>
+                    <ToastContainer />
                 </Col>
                 <Col lg='6' ></Col>
             </Row>
-            
+
 
         </div>
     );
