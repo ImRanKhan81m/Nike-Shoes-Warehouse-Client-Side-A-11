@@ -8,7 +8,7 @@ const Header = () => {
     return (
             <Navbar sticky='top' className='shadow-sm navbarh' collapseOnSelect expand="lg"  variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand >
                         <div><Link to={'/'}><img style={{width:'150px'}} src={logo} alt="" /></Link></div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

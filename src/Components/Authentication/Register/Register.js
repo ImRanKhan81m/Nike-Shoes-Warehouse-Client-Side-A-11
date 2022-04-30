@@ -3,23 +3,43 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 
 const Register = () => {
     const navigate = useNavigate();
-
-
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigateLogin= ()=>{
         navigate('/login')
     }
+    if(loading){
+        return <Loading/>
+    }
+
+    const handleRegister= async(event)=>{
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        await createUserWithEmailAndPassword(email, password);;
+        navigate('/')
+
+    }
     return (
-        <div className='register-form container inventory py-5'>
+        <div className='register-form container inventory py-3'>
             <h2>Please <span>Register</span></h2>
             <Row>
                 <Col lg='3'></Col>
                 <Col lg='6'>
                     <div className=' border mt-4 login'>
-                        <Form className='text-start p-4 mt-4 '>
+                        <Form onSubmit={handleRegister} className='text-start p-4 mt-4 '>
                             <Form.Group className="mb-3" controlId="formBasicName">
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control type="text" name='name' placeholder="Enter your name" required />
