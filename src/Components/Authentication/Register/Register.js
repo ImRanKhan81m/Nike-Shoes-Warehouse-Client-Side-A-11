@@ -37,7 +37,7 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        await createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password, name);
         // navigate('/')
     }
     
