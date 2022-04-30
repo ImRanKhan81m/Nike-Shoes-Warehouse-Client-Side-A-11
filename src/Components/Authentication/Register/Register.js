@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -9,6 +9,8 @@ import Loading from '../../Loading/Loading';
 
 const Register = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
         user,
@@ -21,6 +23,9 @@ const Register = () => {
     }
     if(loading){
         return <Loading/>
+    }
+    if (user) {
+        navigate(from, { replace: true })
     }
 
     const handleRegister= async(event)=>{
