@@ -22,7 +22,7 @@ const InventoryItems = ({ product }) => {
                         <h3>{product.shoeName}</h3>
                         <p style={{ color: 'gray' }}>{product.description}</p>
                         <p><span>Price:</span> {product.price}</p>
-                        <p><span>Quantity:</span> {product.quantity}pcs</p>
+                        <p><span>Quantity:</span> {product.quantity} Pcs</p>
                         <p><span>Supplier Name:</span> {product.supplierName}</p>
                         <button 
                         onClick={()=>handleUpdateProduct(product._id)}
