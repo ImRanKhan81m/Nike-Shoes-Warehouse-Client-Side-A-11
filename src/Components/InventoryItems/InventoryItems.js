@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './InventoryItems.css'
-import img1 from '../images/f-img-3.1.png'
 
 const InventoryItems = ({ product }) => {
     return (
