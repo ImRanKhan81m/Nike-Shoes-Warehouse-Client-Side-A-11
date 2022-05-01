@@ -17,7 +17,7 @@ const ManageInventoriesProduct = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure want to Delete?');
         if(proceed){
-            fetch(`http://localhost:5000/shoe/${id}`, {
+            fetch(`http://localhost:5000/shoes/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

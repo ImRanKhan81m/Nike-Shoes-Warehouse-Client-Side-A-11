@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         event.preventDefault();
         const quantity = parseFloat(event.target.quantity.value) + parseFloat(product.quantity);
         if (quantity && quantity >= 0) {
-            fetch(`http://localhost:5000/shoe/${product._id}`, {
+            fetch(`http://localhost:5000/shoes/${product._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
         console.log(quantity);
 
         if (quantity >= 0) {
-            fetch(`http://localhost:5000/shoe/${product._id}`, {
+            fetch(`http://localhost:5000/shoes/${product._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Col, Container, Form, Row } from 'react-bootstrap';
 import './AddInventory.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddInventory = () => {
 
@@ -25,6 +27,7 @@ const AddInventory = () => {
         })
           .then(res => res.json())
           .then(data => {
+            toast('New Inventory added successfully!')
             // setIsReload(!isReload);
           })
       }
@@ -59,6 +62,7 @@ const AddInventory = () => {
                     </Col>
                     <Col lg='3'></Col>
                 </Row>
+                <ToastContainer/>
             </Container>
         </div>
     );
