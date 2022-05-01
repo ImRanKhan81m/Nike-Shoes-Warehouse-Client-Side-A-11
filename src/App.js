@@ -20,10 +20,14 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/manage' element={<ManageInventoriesProduct />} />
         <Route path='/addInventory' element={<AddInventory />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageInventoriesProduct />
+          </RequireAuth>
+        } />
         <Route path='/shoes/:manageId' element={
           <RequireAuth>
             <UpdateProduct />
