@@ -6,6 +6,7 @@ import logo from '../images/logo/logo2.png'
 import './Header.css'
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -21,22 +22,22 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto ">
-                        <Nav.Link style={{ color: 'black' }} as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link style={{ color: 'black' }} as={Link} to="/blog">Blog</Nav.Link>
+                    <Nav className="ms-auto nav-item">
+                        <CustomLink  to="/">Home</CustomLink>
+                        <CustomLink  to="/blog">Blog</CustomLink>
                         {
                             user && <>
-                                <Nav.Link style={{ color: 'black' }} as={Link} to="/manage">Manage items</Nav.Link>
-                                <Nav.Link style={{ color: 'black' }} href="#deets">Add Item</Nav.Link>
-                                <Nav.Link style={{ color: 'black' }} href="#deets">My Items</Nav.Link>
+                                <CustomLink to="/manage">Manage items</CustomLink>
+                                <CustomLink to={'/addInventory'} >Add Item</CustomLink>
+                                <CustomLink to={'/myItems'} >My Items</CustomLink>
                             </>
                         }
                         {
                             user ?
-                                <Nav.Link style={{ color: 'black' }} onClick={handleSignOut}>
+                                <CustomLink to={'/login'} onClick={handleSignOut}>
                                     Log Out
-                                </Nav.Link> :
-                                <Nav.Link style={{ color: 'black' }} as={Link} to="/login">Login</Nav.Link>
+                                </CustomLink> :
+                                <CustomLink to="/login">Login</CustomLink>
                         }
                     </Nav>
                 </Navbar.Collapse>

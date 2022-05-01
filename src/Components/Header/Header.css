@@ -1,7 +1,9 @@
 .navbarh{
     background-color: #e2e2fe !important;
 }
-.nav-item nav{
-    font-size: 20px;
-    color: black !important;
+.nav-item a{
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 0 5px 0 5px;
 }
