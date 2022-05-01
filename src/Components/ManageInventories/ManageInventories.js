@@ -1,9 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import img1 from '../images/f-img-3.1.png'
+import { useNavigate } from 'react-router-dom';
 import './ManageInventories.css'
 
 const ManageInventories = ({product, handleDelete,isReload,setIsReload}) => {
+    const navigate = useNavigate();
+    const handleUpdateProduct = id =>{
+        navigate(`/shoes/${id}`)
+    }
+
     return (
         <div className='inventory-items p-4'>
             <Row>
@@ -19,7 +24,9 @@ const ManageInventories = ({product, handleDelete,isReload,setIsReload}) => {
                         <p><span>Price:</span> {product.price}</p>
                         <p><span>Quantity:</span> {product.quantity} Pcs</p>
                         <p><span>Supplier Name:</span> {product.supplierName}</p>
-                        <button className='inventory-btn mt-3 me-3'>Update</button>
+                        <button 
+                        onClick={()=>handleUpdateProduct(product._id)}
+                        className='inventory-btn mt-3 me-3'>Update</button>
                         <button
                          onClick={()=>handleDelete(product._id)}
                          className='inventory-btn mt-3'>Delete</button>
