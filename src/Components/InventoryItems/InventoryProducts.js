@@ -12,7 +12,7 @@ const InventoryProducts = () => {
         .then(data=> setProducts(data.slice(0,6)))
     },[]);
 
-    const handleManage= ()=>{
+    const handleManage= () =>{
         navigate('/manage')
     }
 

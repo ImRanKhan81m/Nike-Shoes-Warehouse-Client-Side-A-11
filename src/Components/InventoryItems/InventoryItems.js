@@ -1,8 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './InventoryItems.css'
 
 const InventoryItems = ({ product }) => {
+    const navigate = useNavigate();
+
+    const handleUpdateProduct = id =>{
+        navigate(`/shoes/${id}`)
+    }
     return (
         <div className='inventory-items p-4'>
             <Row>
@@ -18,7 +24,9 @@ const InventoryItems = ({ product }) => {
                         <p><span>Price:</span> {product.price}</p>
                         <p><span>Quantity:</span> {product.quantity}pcs</p>
                         <p><span>Supplier Name:</span> {product.supplierName}</p>
-                        <button className='inventory-btn mt-3'>Manage Product</button>
+                        <button 
+                        onClick={()=>handleUpdateProduct(product._id)}
+                        className='inventory-btn mt-3'>Manage Product</button>
                     </div>
                 </Col>
             </Row>

@@ -9,6 +9,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageInventoriesProduct from './Components/ManageInventories/ManageInventoriesProduct';
 import NotFound from './Components/NotFound/NotFound';
+import UpdateProduct from './UpdateProduct/UpdateProduct';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/addInventory' element={<AddInventory/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
+        <Route path='/shoes/:manageId' element={<UpdateProduct/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </div>
