@@ -20,19 +20,39 @@ const UpdateProduct = () => {
     const handleUpdate = (event) => {
         event.preventDefault();
         const quantity = parseFloat(event.target.quantity.value) + parseFloat(product.quantity);
-        if(quantity && quantity > 0 ){
+        if (quantity && quantity >= 0) {
             fetch(`http://localhost:5000/shoe/${product._id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ quantity}),
-        })
-            .then((res) => res.json())
-            .then((data) => setIsReload(!isReload));
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ quantity }),
+            })
+                .then((res) => res.json())
+                .then((data) => setIsReload(!isReload));
         }
         document.getElementById("form").reset();
     };
+
+
+
+    const handleDelivered = (event) => {
+        const remainingQuantity = parseFloat(product.quantity);
+        const quantity = remainingQuantity -1;
+        console.log(quantity);
+
+        if (quantity >= 0) {
+            fetch(`http://localhost:5000/shoe/${product._id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ quantity }),
+            })
+                .then((res) => res.json())
+                .then((data) => setIsReload(!isReload));
+        }
+    }
 
     return (
         <div className='inventory'>
@@ -53,11 +73,12 @@ const UpdateProduct = () => {
                             <p><span>Supplier Name:</span> {product.supplierName}</p>
                             <p><span>Quantity:</span> {product.quantity} Pcs</p>
                             <button
+                                onClick={handleDelivered}
                                 className='inventory-btn mt-3 mb-4'>Delivered</button>
                             <form id='form' onSubmit={handleUpdate}
                                 className='update-form'>
                                 <input className='border shadow-sm' type="number"
-                                name='quantity' />
+                                    name='quantity' />
                                 <button
 
                                     className='border shadow-sm'>Add Item</button>
