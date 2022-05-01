@@ -1,13 +1,14 @@
 import { stringify } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './UpdateProduct.css'
 
 const UpdateProduct = () => {
     const [product, setProduct] = useState({});
     const { manageId } = useParams();
     const [isReload, setIsReload] = useState(false);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const url = `http://localhost:5000/shoes/${manageId}`;
@@ -16,6 +17,9 @@ const UpdateProduct = () => {
             .then(data => setProduct(data))
     }, [isReload]);
 
+    const handleManage = () => {
+        navigate('/manage')
+    }
 
     const handleUpdate = (event) => {
         event.preventDefault();
@@ -38,7 +42,7 @@ const UpdateProduct = () => {
 
     const handleDelivered = (event) => {
         const remainingQuantity = parseFloat(product.quantity);
-        const quantity = remainingQuantity -1;
+        const quantity = remainingQuantity - 1;
         console.log(quantity);
 
         if (quantity >= 0) {
@@ -72,9 +76,21 @@ const UpdateProduct = () => {
                             <p><span>Price:</span> {product.price}</p>
                             <p><span>Supplier Name:</span> {product.supplierName}</p>
                             <p><span>Quantity:</span> {product.quantity} Pcs</p>
+                            {
+                                product.quantity > 0 ? <button
+                                    onClick={handleDelivered}
+                                    className='inventory-btn mt-3 mb-4'
+                                >Delivered</button> :
+                                    <button
+                                        className='inventory-btn mt-3 mb-4'
+                                    >Sold Out</button>
+                            }
                             <button
-                                onClick={handleDelivered}
-                                className='inventory-btn mt-3 mb-4'>Delivered</button>
+                                onClick={handleManage}
+                                className='border shadow-sm ms-3 manage-button'>Manage Inventories
+                            </button>
+
+
                             <form id='form' onSubmit={handleUpdate}
                                 className='update-form'>
                                 <input className='border shadow-sm' type="number"

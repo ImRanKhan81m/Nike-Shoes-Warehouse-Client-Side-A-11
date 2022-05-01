@@ -20,3 +20,11 @@
     color: white;
     border-radius: 0 5px 5px 0;
 }
+.manage-button{
+    padding: 10px 20px;
+    background-color:#2C2C54 ;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
