@@ -1,3 +1,4 @@
+import { stringify } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
@@ -6,16 +7,32 @@ import './UpdateProduct.css'
 const UpdateProduct = () => {
     const [product, setProduct] = useState({});
     const { manageId } = useParams();
-    console.log(product);
-
+    const [isReload, setIsReload] = useState(false);
 
     useEffect(() => {
         const url = `http://localhost:5000/shoes/${manageId}`;
-        console.log(url);
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, []);
+    }, [isReload]);
+
+
+    const handleUpdate = (event) => {
+        event.preventDefault();
+        const quantity = parseFloat(event.target.quantity.value) + parseFloat(product.quantity);
+        if(quantity && quantity > 0 ){
+            fetch(`http://localhost:5000/shoe/${product._id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ quantity}),
+        })
+            .then((res) => res.json())
+            .then((data) => setIsReload(!isReload));
+        }
+        document.getElementById("form").reset();
+    };
 
     return (
         <div className='inventory'>
@@ -37,10 +54,14 @@ const UpdateProduct = () => {
                             <p><span>Quantity:</span> {product.quantity} Pcs</p>
                             <button
                                 className='inventory-btn mt-3 mb-4'>Delivered</button>
-                            <div className='update-form'>
-                                <input className='border shadow-sm' type="number" />
-                                <button className='border shadow-sm'>Add Item</button>
-                            </div>
+                            <form id='form' onSubmit={handleUpdate}
+                                className='update-form'>
+                                <input className='border shadow-sm' type="number"
+                                name='quantity' />
+                                <button
+
+                                    className='border shadow-sm'>Add Item</button>
+                            </form>
                         </div>
                     </Col>
 
