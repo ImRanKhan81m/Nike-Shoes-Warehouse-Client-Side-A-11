@@ -21,9 +21,9 @@ const ManageInventories = ({product, handleDelete,isReload,setIsReload}) => {
                     <div className='text-start inventory-detail'>
                         <h3>{product.shoeName}</h3>
                         <p style={{ color: 'gray' }}>{product.description}</p>
-                        <p><span>Price:</span> {product.price}</p>
-                        <p><span>Quantity:</span> {product.quantity} Pcs</p>
                         <p><span>Supplier Name:</span> {product.supplierName}</p>
+                        <p><span>Quantity:</span> {product.quantity} Pcs</p>
+                        <p><span>Price:</span> {product.price}</p>
                         <button 
                         onClick={()=>handleUpdateProduct(product._id)}
                         className='inventory-btn mt-3 me-3'>Update</button>

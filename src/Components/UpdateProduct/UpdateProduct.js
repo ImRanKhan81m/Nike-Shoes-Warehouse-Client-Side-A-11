@@ -97,7 +97,7 @@ const UpdateProduct = () => {
                                     name='quantity' />
                                 <button
 
-                                    className='border shadow-sm'>Add Item</button>
+                                    className='border shadow-sm'>ReStock</button>
                             </form>
                         </div>
                     </Col>

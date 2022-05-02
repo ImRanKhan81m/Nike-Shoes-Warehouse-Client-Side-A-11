@@ -28,8 +28,9 @@ const AddInventory = () => {
           .then(res => res.json())
           .then(data => {
             toast('New Inventory added successfully!')
-            // setIsReload(!isReload);
+            
           })
+          document.getElementById("form").reset();
       }
     return (
         <div className='inventory'>
@@ -38,7 +39,7 @@ const AddInventory = () => {
                 <Row>
                     <Col lg='3'></Col>
                     <Col lg='6' className='border-lg pt-5 px-5 pb-4 shadow addInventory-form'>
-                        <Form onSubmit={handlePost}>
+                        <Form onSubmit={handlePost} id='form'>
                             <Form.Group className="mb-3 shadow-sm" controlId="formBasicEmail">
                                 <Form.Control type="text" placeholder="Enter Product Name" name='shoeName' required/>
                             </Form.Group>
