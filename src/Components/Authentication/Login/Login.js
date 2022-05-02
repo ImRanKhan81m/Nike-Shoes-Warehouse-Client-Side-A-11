@@ -9,6 +9,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -27,10 +28,6 @@ const Login = () => {
     const navigateRegister = () => {
         navigate('/register')
     }
-    if (user) {
-        navigate(from, { replace: true })
-    }
-
 
     const resetPassword = async () => {
         const email = emailRef.current.value;
@@ -49,13 +46,18 @@ const Login = () => {
     if (error) {
         errorElement = <p className='text-danger'>Incorrect Username or Password. Try Again!</p>
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password)
-
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
+
+
+
     return (
         <div className='container py-3 inventory' style={{ height: '86vh' }}>
             <h2>Please <span>Login</span></h2>
