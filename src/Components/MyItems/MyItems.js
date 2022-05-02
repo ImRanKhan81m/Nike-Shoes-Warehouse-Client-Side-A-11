@@ -1,5 +1,5 @@
 
-import { signOut } from 'firebase/auth';
+
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ const MyItems = () => {
 
         const getProducts = async () => {
             const email = user?.email;
-            const url = `http://localhost:5000/shoe?email=${email}`;
+            const url = `https://young-caverns-12547.herokuapp.com/shoe?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setProducts(data);
@@ -32,7 +32,7 @@ const MyItems = () => {
         getProducts()
 
 
-        /* fetch(`http://localhost:5000/shoe?email=${email}`)
+        /* fetch(`https://young-caverns-12547.herokuapp.com/shoe?email=${email}`)
         .then(res => res.json())
         .then(data=> setProducts(data)) */
     }, [user]);

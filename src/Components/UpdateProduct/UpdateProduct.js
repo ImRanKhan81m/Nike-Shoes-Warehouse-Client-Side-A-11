@@ -11,7 +11,7 @@ const UpdateProduct = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const url = `http://localhost:5000/shoes/${manageId}`;
+        const url = `https://young-caverns-12547.herokuapp.com/shoes/${manageId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         event.preventDefault();
         const quantity = parseFloat(event.target.quantity.value) + parseFloat(product.quantity);
         if (quantity && quantity >= 0) {
-            fetch(`http://localhost:5000/shoes/${product._id}`, {
+            fetch(`https://young-caverns-12547.herokuapp.com/shoes/${product._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
         console.log(quantity);
 
         if (quantity >= 0) {
-            fetch(`http://localhost:5000/shoes/${product._id}`, {
+            fetch(`https://young-caverns-12547.herokuapp.com/shoes/${product._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

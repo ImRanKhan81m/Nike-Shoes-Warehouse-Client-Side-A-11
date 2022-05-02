@@ -8,7 +8,7 @@ const ManageInventoriesProduct = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/shoes')
+        fetch('https://young-caverns-12547.herokuapp.com/shoes')
             .then(res => res.json())
             .then(data => setManageProducts(data))
     }, [isReload]);
@@ -16,19 +16,19 @@ const ManageInventoriesProduct = () => {
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure want to Delete?');
-        if(proceed){
-            fetch(`http://localhost:5000/shoes/${id}`, {
-            method: "DELETE",
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                setIsReload(!isReload);
-            });
+        if (proceed) {
+            fetch(`https://young-caverns-12547.herokuapp.com/shoes/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    setIsReload(!isReload);
+                });
         }
     };
 
-    const handleAddItem=() =>{
+    const handleAddItem = () => {
         navigate('/addInventory')
     }
 
@@ -39,9 +39,9 @@ const ManageInventoriesProduct = () => {
                     <h2><span>Manage</span> Inventories</h2>
                     <div className='mt-5'>
                         <div className=' mb-4 '>
-                        <button 
-                        onClick={handleAddItem}
-                        className='inventory-btn py-2'>Add New Inventory</button>
+                            <button
+                                onClick={handleAddItem}
+                                className='inventory-btn py-2'>Add New Inventory</button>
                         </div>
                         <div className='manage-inventories  '>
                             {
