@@ -8,7 +8,6 @@ import auth from '../../firebase.init';
 
 const AddInventory = () => {
     const [user] = useAuthState(auth);
-    console.log(user.email);
 
 
 
