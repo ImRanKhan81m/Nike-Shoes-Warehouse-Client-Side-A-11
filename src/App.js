@@ -8,6 +8,7 @@ import Blog from './Components/Blog/Blog';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageInventoriesProduct from './Components/ManageInventories/ManageInventoriesProduct';
+import MyItems from './Components/MyItems/MyItems';
 import NotFound from './Components/NotFound/NotFound';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import UpdateProduct from './Components/UpdateProduct/UpdateProduct';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/addInventory' element={<AddInventory />} />
+        <Route path='/myItems' element={<MyItems />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/manage' element={

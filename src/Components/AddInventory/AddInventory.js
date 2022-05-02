@@ -3,13 +3,18 @@ import {Col, Container, Form, Row } from 'react-bootstrap';
 import './AddInventory.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddInventory = () => {
+    const [user] = useAuthState(auth);
+    console.log(user.email);
 
 
 
     const handlePost = event => {
         event.preventDefault();
+        const email = user.email;
         const shoeName = event.target.shoeName.value;
         const description = event.target.description.value;
         const price = event.target.price.value;
@@ -23,15 +28,16 @@ const AddInventory = () => {
           headers: {
             "content-type": "application/json"
           },
-          body: JSON.stringify({ shoeName, description, quantity, price, supplierName ,imgURL})
+          body: JSON.stringify({email, shoeName, description, quantity, price, supplierName ,imgURL})
         })
           .then(res => res.json())
           .then(data => {
             toast('New Inventory added successfully!')
             
           })
-          document.getElementById("form").reset();
-      }
+          event.target.reset();
+        //   document.getElementById("form").reset();
+      } 
     return (
         <div className='inventory'>
             <h2 className='mt-3 mb-4'>Add New <span>Inventory</span></h2>
