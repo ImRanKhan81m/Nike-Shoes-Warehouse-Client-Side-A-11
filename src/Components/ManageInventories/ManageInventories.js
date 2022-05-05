@@ -29,7 +29,7 @@ const ManageInventories = ({product, handleDelete,isReload,setIsReload}) => {
                         className='inventory-btn mt-3 me-3'>Update</button>
                         <button
                          onClick={()=>handleDelete(product._id)}
-                         className='inventory-btn mt-3'>Delete</button>
+                         className='delete-btn mt-3'>Delete</button>
                     </div>
                 </Col>
             </Row>
