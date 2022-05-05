@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ManageInventories from './ManageInventories';
@@ -38,7 +39,7 @@ const ManageInventoriesProduct = () => {
                 <div className='manage-inventory inventory'>
                     <h2><span>Manage</span> Inventories</h2>
                     <div className='mt-5'>
-                        <div className=' mb-4 '>
+                        <div className=' mb-4 text-end'>
                             <button
                                 onClick={handleAddItem}
                                 className='inventory-btn py-2'>Add New Inventory</button>
