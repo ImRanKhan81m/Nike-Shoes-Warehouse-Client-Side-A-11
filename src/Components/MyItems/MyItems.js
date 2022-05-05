@@ -1,20 +1,19 @@
-
-
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
+import MyItemsProduct from '../MyItemsProduct/MyItemsProduct';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const [products, setProducts] = useState([]);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [isReload, setIsReload] = useState(false);
 
 
     useEffect(() => {
-
         const getProducts = async () => {
             const email = user?.email;
             const url = `https://young-caverns-12547.herokuapp.com/shoe?email=${email}`;
@@ -31,18 +30,42 @@ const MyItems = () => {
             }
         };
         getProducts()
+    }, [isReload]);
 
-
-        /* fetch(`https://young-caverns-12547.herokuapp.com/shoe?email=${email}`)
-        .then(res => res.json())
-        .then(data=> setProducts(data)) */
-    }, [user]);
+    const handleDelete = (id) => {
+        const proceed = window.confirm('Are you sure want to Delete?');
+        if (proceed) {
+            fetch(`https://young-caverns-12547.herokuapp.com/shoes/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    setIsReload(!isReload);
+                });
+        }
+    };
 
 
     return (
-        <div className='inventory'>
-            <h2 className='mt-3'>My Items : {products.length}</h2>
-        </div>
+        <div className=' py-3'>
+                <div className='manage-inventory inventory'>
+                    <h2><span>Manage</span> Inventories</h2>
+                    <div className='mt-5'>
+                        <div className='manage-inventories  '>
+                            {
+                                products.map(product => <MyItemsProduct
+                                    key={product._id}
+                                    product={product}
+                                    handleDelete={handleDelete}
+                                    setIsReload={setIsReload}
+                                    isReload={isReload}
+                                ></MyItemsProduct>)
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
     );
 };
 

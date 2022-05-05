@@ -1,10 +1,10 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './ManageInventories.css'
 
-const ManageInventories = ({product, handleDelete}) => {
+const MyItemsProduct = ({product, handleDelete}) => {
     const navigate = useNavigate();
+
     const handleUpdateProduct = id =>{
         navigate(`/shoes/${id}`)
     }
@@ -37,4 +37,4 @@ const ManageInventories = ({product, handleDelete}) => {
     );
 };
 
-export default ManageInventories;
+export default MyItemsProduct;
