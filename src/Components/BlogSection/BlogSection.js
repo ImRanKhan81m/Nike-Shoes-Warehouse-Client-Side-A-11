@@ -16,7 +16,7 @@ const BlogSection = () => {
                         <div className='pe-5 blog-section-details'>
                             <h3>10 of The World's Rarest Sneakers</h3>
                             <p>By definition, a minimalist is someone that lives a simple and decluttered life without too many possessions. The physical items that they do own either hold a specific purpose, or...</p>
-                            <button>READ MORE</button>
+                            <button className='mb-md-4'>READ MORE</button>
                         </div>
                     </Col>
                     <Col lg='7'>
@@ -32,7 +32,7 @@ const BlogSection = () => {
                         </div>
                     </Col>
                     <Col lg='5' className=' d-flex justify-content-center align-items-center text-start'>
-                        <div className='ps-5 blog-section-details'>
+                        <div className='ps-lg-5 mt-md-3 blog-section-details'>
                             <h3>Low Sneakers, Running Shoes Or High Sneakers</h3>
                             <p>By definition, a minimalist is someone that lives a simple and decluttered life without too many possessions. The physical items that they do own either hold a specific purpose, or...</p>
                             <button>READ MORE</button>

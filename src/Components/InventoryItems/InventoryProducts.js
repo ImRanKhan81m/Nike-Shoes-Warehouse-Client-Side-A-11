@@ -28,7 +28,7 @@ const InventoryProducts = () => {
 
     return (
         <div>
-            <div className='mt-5 py-5'>
+            <div className='mt-lg-5 mt-md-0 py-5'>
                 <div className='inventory'>
                     <h2><span>Inventory</span> Products</h2>
                     <div className='mt-5'>

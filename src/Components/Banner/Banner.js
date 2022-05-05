@@ -10,7 +10,7 @@ const Banner = () => {
                         <Row>
                             <Col lg='6' className='d-flex justify-content-center align-items-center'>
                                 <div className='text-start '>
-                                    <div className='banner-text ms-5 ps-5 mt-5'>
+                                    <div className='banner-text ms-5 ms-md-0 ps-5 mt-lg-5'>
                                     <span>Nike Yellow Shoes</span>
                                     <h2>Nike Metcon Shoes</h2>
                                     <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>

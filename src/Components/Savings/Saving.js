@@ -7,7 +7,7 @@ const Saving = () => {
     return (
         <div className='saving-section mt-5'>
             <Container>
-                <Row className='p-4'>
+                <Row className='p-lg-4'>
                     <Col lg='6'>
                         <div className='saving-section-img'>
                             <img src={img} alt="" />

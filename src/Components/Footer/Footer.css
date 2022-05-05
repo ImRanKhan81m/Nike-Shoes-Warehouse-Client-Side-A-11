@@ -33,3 +33,20 @@
     cursor: pointer;
     color: rgba(255, 166, 0, 0.742);
 }
+
+
+
+
+
+
+/* =================== */
+@media only screen and (max-width: 800px) {
+    .footer-details-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 770px) {
+    .footer-details-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

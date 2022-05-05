@@ -1,5 +1,5 @@
 .carousel-section {
-    padding:100px;
+    padding: 100px;
     /* background-image: url(../images/home-bg-3.jpg); */
     background-size: cover;
 }
@@ -8,20 +8,43 @@
     width: 100%;
     transform: rotate(-20deg);
 }
-.details-btn{
+
+.details-btn {
     padding: 10px 20px;
     /* border: 1px solid rgba(99, 99, 99, 0.251); */
     border: none;
     border-radius: 8px;
-    background-color:rgba(255, 166, 0, 0.774);
+    background-color: rgba(255, 166, 0, 0.774);
     font-size: 20px;
 }
-.banner-text span{
+
+.banner-text span {
     color: #FFB908;
     font-size: 18px;
 }
-.banner-text h2{
+
+.banner-text h2 {
     color: #2C2C54;
     font-size: 55px;
     font-weight: 700;
+}
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 1400px) {
+    .carousel-section {
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .carousel-section {
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .carousel-section {
+        padding-left: 20px;
+    }
 }

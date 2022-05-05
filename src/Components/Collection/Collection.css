@@ -1,28 +1,32 @@
-.collection-exercise{
+.collection-exercise {
     background-image: url(../images/home-1-banner-1.jpg);
     background-size: cover;
-    padding:80px 0 80px 50px;
+    padding: 80px 0 80px 50px;
     color: #fff;
     width: 100%;
-    
+
 }
-.collection-sport{
+
+.collection-sport {
     background-image: url(../images/home-1-banner-2.jpg);
-    background-size:cover;
-    padding:80px 0 80px 50px;
+    background-size: cover;
+    padding: 80px 0 80px 50px;
     width: 100%;
 }
-.collection{
+
+.collection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.collection h2{
+
+.collection h2 {
     color: #fff;
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 6px;
 }
-.collection h6{
+
+.collection h6 {
     color: orange;
     font-size: 20px;
     font-weight: 700;
@@ -32,8 +36,17 @@
 
 
 @media only screen and (max-width: 1245px) {
-    .collection{
+    .collection {
         display: grid;
         grid-template-columns: 1fr;
     }
-  }
+}
+@media only screen and (max-width: 12450px) {
+    .collection-exercise {
+        padding: 50px 0 30px 50px;
+
+    }
+    .collection-sport {
+        padding: 50px 0 30px 50px;
+    }
+}

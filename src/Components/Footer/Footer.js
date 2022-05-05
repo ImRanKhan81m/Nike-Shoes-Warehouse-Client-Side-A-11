@@ -7,9 +7,9 @@ const Footer = () => {
         return new Date().getFullYear();
     };
     return (
-        <div className=' px-5 pb-1 pt-5 footer-section mb-0'>
-            <Container>
-                <div className='py-5 px-5 footer-details-section'>
+        <div className=' px-lg-5 px-3 pb-1 pt-lg-5 footer-section mb-0'>
+            <Container className='mx-0 mx-auto'>
+                <div className='py-5 footer-details-section'>
                     <div className='text-start footer-details'>
                         <h4>ADDRESS OFFICE</h4>
                         <p><b>460 West 34th Street, 15th floor, Dhaka</b></p>
@@ -24,15 +24,15 @@ const Footer = () => {
                         <p>SITE FEEDBACK</p>
                         <p>CAREERS</p>
                     </div>
-                    <div className='text-start footer-details ms-lg-5  ps-lg-5'>
-                        <h4>GET HELP</h4>
-                        <p>Order Status</p>
-                        <p>Shipping And Delivery</p>
-                        <p>Returns</p>
-                        <p>Payment Options</p>
-                        <p>Contact Us</p>
+                    <div className='text-start footer-details '>
+                            <h4>GET HELP</h4>
+                            <p>Order Status</p>
+                            <p>Shipping And Delivery</p>
+                            <p>Returns</p>
+                            <p>Payment Options</p>
+                            <p>Contact Us</p>
                     </div>
-                    <div className='text-start footer-details ms-lg-5'>
+                    <div className='text-start footer-details'>
                         <h4>PRODUCTS</h4>
                         <p>Shoes</p>
                         <p>Clothing</p>

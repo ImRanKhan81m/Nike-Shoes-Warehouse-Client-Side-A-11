@@ -58,3 +58,14 @@
 .inventory-detail p{
     margin-bottom: 5px;
 }
+
+
+
+/* ==================================== */
+@media only screen and (max-width: 1200px) {
+    .inventories{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
