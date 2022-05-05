@@ -5,6 +5,7 @@ import AddInventory from './Components/AddInventory/AddInventory';
 import Login from './Components/Authentication/Login/Login';
 import Register from './Components/Authentication/Register/Register';
 import Blog from './Components/Blog/Blog';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageInventoriesProduct from './Components/ManageInventories/ManageInventoriesProduct';
@@ -41,6 +42,7 @@ function App() {
         } />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

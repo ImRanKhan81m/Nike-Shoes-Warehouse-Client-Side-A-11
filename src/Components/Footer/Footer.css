@@ -1,0 +1,34 @@
+.footer-section{
+    background-color:#0F0826 ;
+    margin-top: 70px;
+}
+.footer-details-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    border-bottom: 1px solid gray;
+}
+.footer-logo img{
+    width: 120px;
+    border-radius: 20px;
+}
+.footer-details p{
+    color: rgb(150, 150, 150);
+    margin-bottom: 13px;
+    font-weight: 400;
+}
+.footer-details h4{
+    color: rgb(199, 196, 196);
+    margin-bottom: 15px;
+}
+.copyright p{
+    color: rgb(215, 214, 214);
+}
+.link p{
+    cursor: pointer;
+    transition: .5s;
+}
+.link p:hover{
+    cursor: pointer;
+    color: rgba(255, 166, 0, 0.742);
+}
