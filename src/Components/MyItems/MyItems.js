@@ -42,7 +42,7 @@ const MyItems = () => {
                 .then((data) => {
                     console.log(data);
                     setIsReload(!isReload);
-                });
+                }); 
         }
     };
 
