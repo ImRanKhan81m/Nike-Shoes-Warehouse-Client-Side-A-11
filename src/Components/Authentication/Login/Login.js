@@ -39,10 +39,10 @@ const Login = () => {
         }
     }
 
-    
-    let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger'>Incorrect Username or Password. Try Again!</p>
+
+
+    if (loading) {
+        return <Loading />
     }
     const handleSubmit = async event => {
         event.preventDefault();
@@ -51,10 +51,15 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         const { data } = await axios.post('https://young-caverns-12547.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
+
+    }
+    if (user) {
         navigate(from, { replace: true });
     }
-    if (loading) {
-        return <Loading />
+
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Incorrect Username or Password. Try Again!</p>
     }
 
 

@@ -1,0 +1,15 @@
+.hot-deal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hot-deal img {
+    width: 100%;
+
+}
+.deal{
+    font-size: 22px;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.404);
+}
