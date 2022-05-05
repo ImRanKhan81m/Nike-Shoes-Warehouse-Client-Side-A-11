@@ -11,10 +11,11 @@ import img8 from '../images/download-img/10.1.webp'
 
 const HotDeal = () => {
     return (
-        <div className='inventory'>
-            <h2>BEST <span>SELLER</span></h2>
-            <p className='deal'>Best Seller Product This Week!</p>
-            <div className='hot-deal container pt-4'>
+        <div>
+            <div className='inventory'>
+                <h2>BEST SALES<span> PRODUCT</span></h2>
+                <p className='deal'>Best Seller Product This Week!</p>
+                <div className='container hot-deal pt-4 mt-4'>
                     <div className='border shadow-sm '>
                         <img src={img1} alt="" />
                     </div>
@@ -39,7 +40,11 @@ const HotDeal = () => {
                     <div className='border shadow-sm'>
                         <img src={img8} alt="" />
                     </div>
+                </div>
             </div>
+
+
+
         </div>
     );
 };

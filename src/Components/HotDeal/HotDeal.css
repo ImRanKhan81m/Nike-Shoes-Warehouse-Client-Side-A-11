@@ -13,3 +13,19 @@
     margin-bottom: 0;
     color: rgba(0, 0, 0, 0.404);
 }
+
+
+
+.men-sports-details{
+    background-color: rgba(255, 232, 232, 0.757) ;
+}
+.men-sports{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.men-sports-img img{
+    width: 100%;
+}
+.men-sports p{
+    padding:  0 150px 0 150px;
+}

@@ -1,11 +1,9 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import Banner from '../Banner/Banner';
 import Collection from '../Collection/Collection';
 import HotDeal from '../HotDeal/HotDeal';
 import InventoryProducts from '../InventoryItems/InventoryProducts';
-import Loading from '../Loading/Loading';
+import SportShoes from '../SportsShoes/SportShoes';
 
 const Home = () => {
     return (
@@ -14,7 +12,9 @@ const Home = () => {
             <Banner/>
             <InventoryProducts/>
             <Collection/>
-            <HotDeal/>
+            <SportShoes/>
+            {/* <HotDeal/> */}
+            
         </div>
     );
 };
