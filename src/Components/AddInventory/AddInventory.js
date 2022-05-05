@@ -38,7 +38,7 @@ const AddInventory = () => {
         //   document.getElementById("form").reset();
     }
     return (
-        <div className='inventory'>
+        <div className='inventory mb-5'>
             <h2 className='mt-3 mb-4'>Add New <span>Inventory</span></h2>
             <Container>
                 <Row>

@@ -34,27 +34,25 @@ const ManageInventoriesProduct = () => {
     }
 
     return (
-        <div>
-            <div className=' py-3'>
-                <div className='manage-inventory inventory'>
-                    <h2><span>Manage</span> Inventories</h2>
-                    <div className='mt-5'>
-                        <div className=' mb-4 text-end'>
-                            <button
-                                onClick={handleAddItem}
-                                className='inventory-btn py-2'>Add New Inventory</button>
-                        </div>
-                        <div className='manage-inventories  '>
-                            {
-                                manageProducts.map(manageProduct => <ManageInventories
-                                    key={manageProduct._id}
-                                    product={manageProduct}
-                                    handleDelete={handleDelete}
-                                    setIsReload={setIsReload}
-                                    isReload={isReload}
-                                ></ManageInventories>)
-                            }
-                        </div>
+        <div className=' py-3 mb-5'>
+            <div className='manage-inventory inventory'>
+                <h2><span>Manage</span> Inventories</h2>
+                <div>
+                    <div className=' mb-4 text-end'>
+                        <button
+                            onClick={handleAddItem}
+                            className='inventory-btn py-2'>Add New Inventory</button>
+                    </div>
+                    <div className='manage-inventories  '>
+                        {
+                            manageProducts.map(manageProduct => <ManageInventories
+                                key={manageProduct._id}
+                                product={manageProduct}
+                                handleDelete={handleDelete}
+                                setIsReload={setIsReload}
+                                isReload={isReload}
+                            ></ManageInventories>)
+                        }
                     </div>
                 </div>
             </div>

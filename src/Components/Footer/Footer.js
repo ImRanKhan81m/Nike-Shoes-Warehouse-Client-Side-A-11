@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Footer.css'
-import logo from '../images/logo/logo2-removebg-preview.png'
 
 const Footer = () => {
     const getCurrentYear = () => {

@@ -5,7 +5,7 @@
 .footer-details-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    gap: 40px;
     border-bottom: 1px solid gray;
 }
 .footer-logo img{
@@ -18,8 +18,9 @@
     font-weight: 400;
 }
 .footer-details h4{
-    color: rgb(199, 196, 196);
+    color: rgb(221, 221, 221);
     margin-bottom: 15px;
+    font-family: SofiaPro;
 }
 .copyright p{
     color: rgb(215, 214, 214);

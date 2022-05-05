@@ -48,9 +48,9 @@ const MyItems = () => {
 
 
     return (
-        <div className=' py-3'>
+        <div className=' py-3 mb-5' style={{height:'60vh'}}>
                 <div className='manage-inventory inventory'>
-                    <h2><span>Manage</span> Inventories</h2>
+                    <h2>My <span>Items</span> : {products.length} </h2>
                     <div className='mt-5'>
                         <div className='manage-inventories  '>
                             {
