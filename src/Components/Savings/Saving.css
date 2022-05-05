@@ -1,0 +1,43 @@
+.saving-section {
+    background-image: url(../images/download-img/ba7.webp);
+    padding: 50px;
+}
+
+.saving-section-img img {
+    width: 100%;
+}
+
+.saving-section-details h4 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    margin-bottom: 8px;
+    font-family: SofiaPro;
+    color: #ff871d;
+}
+
+.saving-section-details h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 0.14px;
+    margin-bottom: 10px;
+}
+
+.saving-section-details h3 {
+    font-size: 22px;
+    margin-bottom: 44px;
+    text-transform: uppercase;
+    font-family: SofiaPro;
+    letter-spacing: .1rem;
+}
+.saving-section-details button{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+    font-weight: 500;
+}
+.saving-section-details button:hover{
+    background-color: #ff871d;
+    color: #fff;
+}

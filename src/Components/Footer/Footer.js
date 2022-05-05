@@ -20,10 +20,10 @@ const Footer = () => {
                     </div>
                     <div className='text-start footer-details link'>
                         <h4>FIND OUR WAREHOUSE</h4>
-                        <p><b>COUPON CODE</b></p>
-                        <p><b>SIGNUP FOR EMAIL</b></p>
-                        <p><b>SITE FEEDBACK</b></p>
-                        <p><b>CAREERS</b></p>
+                        <p>COUPON CODE</p>
+                        <p>SIGNUP FOR EMAIL</p>
+                        <p>SITE FEEDBACK</p>
+                        <p>CAREERS</p>
                     </div>
                     <div className='text-start footer-details ms-lg-5  ps-lg-5'>
                         <h4>GET HELP</h4>

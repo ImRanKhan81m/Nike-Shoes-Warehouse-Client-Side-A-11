@@ -1,5 +1,6 @@
 import React from 'react';
 import img9 from '../images/download-img/bbbba1.webp'
+import './SportShoes.css'
 
 const SportShoes = () => {
     return (

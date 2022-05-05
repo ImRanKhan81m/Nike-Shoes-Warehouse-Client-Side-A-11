@@ -4,6 +4,7 @@ import BlogSection from '../BlogSection/BlogSection';
 import Collection from '../Collection/Collection';
 import HotDeal from '../HotDeal/HotDeal';
 import InventoryProducts from '../InventoryItems/InventoryProducts';
+import Saving from '../Savings/Saving';
 import SportShoes from '../SportsShoes/SportShoes';
 
 const Home = () => {
@@ -14,8 +15,9 @@ const Home = () => {
             <InventoryProducts/>
             <Collection/>
             <BlogSection/>
-            <SportShoes/>
+            {/* <SportShoes/> */}
             {/* <HotDeal/> */}
+            <Saving/>
             
         </div>
     );
