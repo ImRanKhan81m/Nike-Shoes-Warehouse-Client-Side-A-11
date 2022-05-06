@@ -34,14 +34,14 @@ const ManageInventoriesProduct = () => {
     }
 
     return (
-        <div className=' py-3 mb-5'>
+        <div className=' py-3 mb-lg-5'>
             <div className='manage-inventory inventory'>
                 <h2><span>Manage</span> Inventories</h2>
                 <div>
-                    <div className=' mb-4 text-end'>
+                    <div className=' mt-4 mb-4 text-end'>
                         <button
                             onClick={handleAddItem}
-                            className='inventory-btn py-2'>Add New Inventory</button>
+                            className='inventory-btn '>Add New Inventory</button>
                     </div>
                     <div className='manage-inventories  '>
                         {
