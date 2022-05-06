@@ -75,4 +75,10 @@
     .collection-sport {
         padding: 40px 0 10px 20px;
     }
+    .collection h2 {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: 0px;
+    }
 }
