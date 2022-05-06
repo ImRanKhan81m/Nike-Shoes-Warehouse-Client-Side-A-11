@@ -47,4 +47,25 @@
     .carousel-section {
         padding-left: 20px;
     }
+    .banner-img img {
+        width: 80%;
+    }
+    .carousel-section {
+        padding: 20px;
+    }
+    .banner-text h2 {
+        font-size: 45px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    
+    .carousel-section {
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    
+    .banner-img img {
+        width: 100%;
+    }
 }

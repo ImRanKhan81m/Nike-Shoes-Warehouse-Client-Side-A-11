@@ -17,10 +17,8 @@
 .inventory-items{
     background-color: #f8f9fa8a;
     box-shadow: 0 2px 4px 1px rgb(27 27 27 / 10%);
-    margin-bottom: 30px;
     border: 1px solid rgba(19,19,19,.125);
     border-radius: 15px ;
-    margin-bottom: 0px;
 }
 .inventory-items img{
     width: 100%;
@@ -67,5 +65,28 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+}
+@media only screen and (max-width: 1060px) {
+    .inventory{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 770px) {
+    .inventory{
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .inventories{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .inventory h2 {
+        font-size: 40px;
+        margin-top: 0px;
+        margin-bottom: 0;
     }
 }

@@ -27,22 +27,20 @@ const InventoryProducts = () => {
     }
 
     return (
-        <div>
-            <div className='mt-lg-5 mt-md-0 py-5'>
-                <div className='inventory'>
-                    <h2><span>Inventory</span> Products</h2>
-                    <div className='mt-5'>
-                        <div className='inventories'>
-                            {
-                                products.map(product => <InventoryItems
-                                    key={product._id}
-                                    product={product}
-                                ></InventoryItems>)
-                            }
-                        </div>
-
-                        <button onClick={handleManage} className='manage-btn mt-5'>Manage Inventories</button>
+        <div className='mt-lg-5 mt-md-0 py-0 py-lg-5 py-md-5'>
+            <div className='inventory'>
+                <h2><span>Inventory</span> Products</h2>
+                <div className='mt-5'>
+                    <div className='inventories'>
+                        {
+                            products.map(product => <InventoryItems
+                                key={product._id}
+                                product={product}
+                            ></InventoryItems>)
+                        }
                     </div>
+
+                    <button onClick={handleManage} className='manage-btn mt-5'>Manage Inventories</button>
                 </div>
             </div>
         </div>

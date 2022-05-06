@@ -22,6 +22,7 @@
     transition: .5s;
     border-radius: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .blog-section-details button:hover{
     background-color: #FF9F1A;

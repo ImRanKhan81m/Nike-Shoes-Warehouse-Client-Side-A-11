@@ -59,7 +59,7 @@ const UpdateProduct = () => {
     }
 
     return (
-        <div className='inventory'>
+        <div className='inventory mb-5 pb-5'>
             <h2 className='mt-3 mb-4 '>Update <span>Inventory</span></h2>
             <Container>
                 <Row className='border p-5 shadow update-details'>

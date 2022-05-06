@@ -41,3 +41,37 @@
     background-color: #ff871d;
     color: #fff;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .saving-section-details h4 {
+        font-size: 40px;
+    }
+    .saving-section-details h1 {
+        font-size: 50px;
+    }
+    .saving-section-details h3 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 1005px) {
+    .saving-section-details h4 {
+        font-size: 35px;
+    }
+    .saving-section-details h1 {
+        font-size: 40px;
+    }
+    .saving-section-details h3 {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    .saving-section {
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 770px) {
+    
+}
