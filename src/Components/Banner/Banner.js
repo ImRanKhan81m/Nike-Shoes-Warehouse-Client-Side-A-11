@@ -13,7 +13,7 @@ const Banner = () => {
                                     <div className='banner-text ms-lg-5 ms-md-0 ps-lg-5 mt-lg-5'>
                                     <span>Nike Yellow Shoes</span>
                                     <h2>Nike Metcon Shoes</h2>
-                                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                                    <p>The Nike Metcon is built for the way you train, with a locked-in fit, unshakeable stability and ground-gripping traction that make a real difference in the ...</p>
                                     <button className='details-btn'>See Details</button>
                                     </div>
                                 </div>
