@@ -65,7 +65,7 @@ const Login = () => {
 
 
     return (
-        <div className='container py-3 inventory' style={{ height: '86vh' }}>
+        <div className='container py-3 inventory' style={{ minHeight: '86vh' }}>
             <h2>Please <span>Login</span></h2>
             <Row className='pb-4 '>
                 <Col lg='3'></Col>

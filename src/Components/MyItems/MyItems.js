@@ -48,16 +48,16 @@ const MyItems = () => {
 
 
     return (
-        <div className=' py-lg-3 mb-5'>
+        <div className=' py-lg-3 pt-3 mb-5'>
                 <div className='manage-inventory inventory'>
                     <h2>My <span>Items</span> : {products.length} </h2>
-                    <div className='mt-5'>
+                    <div className='mt-lg-5 mt-md-4 mt-3'>
                         <div className='manage-inventories  '>
                             {
                                 products.map(product => <MyItemsProduct
                                     key={product._id}
                                     product={product}
-                                    handleDelete={handleDelete}
+                                     handleDelete={handleDelete}
                                     setIsReload={setIsReload}
                                     isReload={isReload}
                                 ></MyItemsProduct>)
