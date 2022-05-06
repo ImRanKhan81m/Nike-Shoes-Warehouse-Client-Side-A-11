@@ -48,7 +48,7 @@ const MyItems = () => {
 
 
     return (
-        <div className=' py-3 mb-5' style={{height:'60vh'}}>
+        <div className=' py-lg-3 mb-5'>
                 <div className='manage-inventory inventory'>
                     <h2>My <span>Items</span> : {products.length} </h2>
                     <div className='mt-5'>

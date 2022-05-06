@@ -43,7 +43,7 @@ const AddInventory = () => {
             <Container>
                 <Row>
                     <Col lg='3'></Col>
-                    <Col lg='6' className='border-lg pt-5 px-5 pb-4 shadow addInventory-form'>
+                    <Col lg='6' className='border-lg pt-5 px-lg-5 px-md-4 pb-4 shadow addInventory-form'>
                         <Form onSubmit={handlePost} id='form'>
                             <Form.Group className="mb-3 shadow-sm" controlId="formBasicEmail">
                                 <Form.Control type="text" placeholder="Enter Product Name" name='shoeName' required />

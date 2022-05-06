@@ -59,17 +59,17 @@ const UpdateProduct = () => {
     }
 
     return (
-        <div className='inventory mb-5 pb-5'>
+        <div className='inventory mb-lg-5 pb-5'>
             <h2 className='mt-3 mb-4 '>Update <span>Inventory</span></h2>
             <Container>
-                <Row className='border p-5 shadow update-details'>
-                    <Col lg='4' className='py-5'>
+                <Row className='border px-lg-4 py-lg-5 p-md-4 py-sm-4 px-sm-3 p-3 shadow update-details'>
+                    <Col lg='4' md='4' sm='12' className='py-lg-5 d-flex justify-content-center align-items-center'>
                         <div className='px-3 py-5 border shadow update-img'>
                             <img style={{ width: '100%' }} src={product.imgURL} alt="" />
                         </div>
                     </Col>
-                    <Col lg='8' className='ps-5 pt-2 '>
-                        <div className='text-start inventory-detail ps-5'>
+                    <Col lg='8' md='8' sm='12' className='ps-lg-5 mt-4 mt-lg-0 d-flex justify-content-center align-items-center'>
+                        <div className='text-start inventory-detail ps-lg-5 ps-md-4'>
                             <h3>{product.shoeName}</h3>
                             <p style={{ color: 'gray' }}>{product.description}</p>
                             <p><span>Product Id:</span> {product._id}</p>
@@ -79,15 +79,15 @@ const UpdateProduct = () => {
                             {
                                 product.quantity > 0 ? <button
                                     onClick={handleDelivered}
-                                    className='inventory-btn mt-3 mb-4'
+                                    className='inventory-btn mt-3 mb-2 me-3'
                                 >Delivered</button> :
                                     <button
-                                        className='inventory-btn mt-3 mb-4'
+                                        className='inventory-btn mt-3 mb-2 me-3'
                                     >Sold Out</button>
                             }
                             <button
                                 onClick={handleManage}
-                                className='border shadow-sm ms-3 manage-button'>Manage Inventories
+                                className='border shadow-sm mb-4  manage-button'>Manage Inventories
                             </button>
 
 

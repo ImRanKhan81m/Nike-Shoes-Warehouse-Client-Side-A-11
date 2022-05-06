@@ -54,11 +54,11 @@
 }
 @media only screen and (max-width: 770px) {
     .collection-exercise {
-        padding: 50px 0 10px 50px;
+        padding: 40px 0 10px 30px;
 
     }
     .collection-sport {
-        padding: 50px 0 10px 50px;
+        padding: 40px 0 10px 30px;
     }
     .collection h6 {
         margin-bottom: 150px;
@@ -67,5 +67,12 @@
 @media only screen and (max-width: 600px) {
     .collection h2 {
         font-size: 40px;
+    }
+    .collection-exercise {
+        padding: 40px 0 10px 20px;
+
+    }
+    .collection-sport {
+        padding: 40px 0 10px 20px;
     }
 }
