@@ -5,6 +5,7 @@ import './ManageInventories.css'
 
 const ManageInventories = ({product, handleDelete}) => {
     const navigate = useNavigate();
+
     const handleUpdateProduct = id =>{
         navigate(`/shoes/${id}`)
     }

@@ -1,12 +1,18 @@
 
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import ManageInventories from './ManageInventories';
 
 const ManageInventoriesProduct = () => {
     const [manageProducts, setManageProducts] = useState([]);
     const [isReload, setIsReload] = useState(false);
     const navigate = useNavigate();
+    const [loading] = useAuthState(auth)
+
+    
 
     useEffect(() => {
         fetch('https://young-caverns-12547.herokuapp.com/shoes')
@@ -14,6 +20,7 @@ const ManageInventoriesProduct = () => {
             .then(data => setManageProducts(data))
     }, [isReload]);
 
+    
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure want to Delete?');
@@ -31,6 +38,9 @@ const ManageInventoriesProduct = () => {
 
     const handleAddItem = () => {
         navigate('/addInventory')
+    }
+    if(loading){
+         <Loading/>
     }
 
     return (

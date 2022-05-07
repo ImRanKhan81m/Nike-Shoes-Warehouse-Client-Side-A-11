@@ -1,20 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import auth from '../../firebase.init';
-import Loading from '../Loading/Loading';
 import InventoryItems from './InventoryItems';
 
 const InventoryProducts = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
-
-
-    const [loading] = useAuthState(auth)
-
-    if (loading) {
-        <Loading />
-    }
 
     useEffect(() => {
         fetch('https://young-caverns-12547.herokuapp.com/shoes')
