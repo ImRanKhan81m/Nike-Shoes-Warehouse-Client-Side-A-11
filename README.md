@@ -1,6 +1,6 @@
 # Welcome to my (Shoes Warehouse) Website
 ## Website name:    Shoes Warehouse
-
+This is a Shoes Warehouse Website. We can maintains all product items update and manage in this website.
 #
 Live site :(https://nike-shoes-warehouse-f66ef.web.app/)
 #
