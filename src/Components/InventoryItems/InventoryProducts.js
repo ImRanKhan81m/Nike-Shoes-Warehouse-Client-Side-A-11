@@ -24,11 +24,12 @@ const InventoryProducts = () => {
 
     return (
         <>
-            {
-                loading ? <Loading /> :
-                    <div className='mt-lg-5 mt-md-0 py-0 py-lg-5 py-md-5'>
-                        <div className='inventory'>
-                            <h2><span>Inventory</span> Products</h2>
+
+            <div className='mt-lg-5 mt-md-0 py-0 py-lg-5 py-md-5'>
+                <div className='inventory'>
+                    <h2><span>Inventory</span> Products</h2>
+                    {
+                        loading ? <Loading /> :
                             <div className='mt-5'>
                                 <div className='inventories'>
                                     {
@@ -41,9 +42,9 @@ const InventoryProducts = () => {
 
                                 <button onClick={handleManage} className='manage-btn mt-5'>Manage Inventories</button>
                             </div>
-                        </div>
-                    </div>
-            }
+                    }
+                </div>
+            </div>
         </>
     );
 };
