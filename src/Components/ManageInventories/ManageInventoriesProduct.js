@@ -1,8 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import ManageInventories from './ManageInventories';
 
@@ -10,17 +8,20 @@ const ManageInventoriesProduct = () => {
     const [manageProducts, setManageProducts] = useState([]);
     const [isReload, setIsReload] = useState(false);
     const navigate = useNavigate();
-    const [loading] = useAuthState(auth)
+    const [loading, setLoading] = useState(false);
 
-    
 
     useEffect(() => {
+        setLoading(true)
         fetch('https://young-caverns-12547.herokuapp.com/shoes')
             .then(res => res.json())
-            .then(data => setManageProducts(data))
+            .then(data => {
+                setManageProducts(data)
+                setLoading(false)
+            })
     }, [isReload]);
 
-    
+
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure want to Delete?');
@@ -39,34 +40,36 @@ const ManageInventoriesProduct = () => {
     const handleAddItem = () => {
         navigate('/addInventory')
     }
-    if(loading){
-         <Loading/>
-    }
 
     return (
-        <div className=' py-3 mb-lg-5'>
-            <div className='manage-inventory inventory'>
-                <h2><span>Manage</span> Inventories</h2>
-                <div>
-                    <div className=' mt-4 mb-4 text-end'>
-                        <button
-                            onClick={handleAddItem}
-                            className='inventory-btn '>Add New Inventory</button>
+        <>
+            {
+                loading ? <Loading /> :
+                    <div className=' py-3 mb-lg-5'>
+                        <div className='manage-inventory inventory'>
+                            <h2><span>Manage</span> Inventories</h2>
+                            <div>
+                                <div className=' mt-4 mb-4 text-end'>
+                                    <button
+                                        onClick={handleAddItem}
+                                        className='inventory-btn '>Add New Inventory</button>
+                                </div>
+                                <div className='manage-inventories  '>
+                                    {
+                                        manageProducts.map(manageProduct => <ManageInventories
+                                            key={manageProduct._id}
+                                            product={manageProduct}
+                                            handleDelete={handleDelete}
+                                            setIsReload={setIsReload}
+                                            isReload={isReload}
+                                        ></ManageInventories>)
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className='manage-inventories  '>
-                        {
-                            manageProducts.map(manageProduct => <ManageInventories
-                                key={manageProduct._id}
-                                product={manageProduct}
-                                handleDelete={handleDelete}
-                                setIsReload={setIsReload}
-                                isReload={isReload}
-                            ></ManageInventories>)
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
+            }
+        </>
     );
 };
 
